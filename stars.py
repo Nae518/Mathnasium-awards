@@ -116,7 +116,8 @@ level_map = {
 level_stars = level_map[level]
 
 con_cards, con_stars = divmod(stars_base, level_stars)
+bonus_cards = pages // 8
 
 col1, col2 = st.columns(2)
 col1.metric("Stars", con_stars)
-col2.metric("Cards", cards_base + con_cards)
+col2.metric("Cards", cards_base + con_cards + bonus_cards)
